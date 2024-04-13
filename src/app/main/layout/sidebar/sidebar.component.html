@@ -1,0 +1,21 @@
+ 
+  <mat-toolbar color="primary" class="mat-elevation-z12 ">
+     
+    <div class="header-content">
+      
+      <img src="assets/background/login-back.png" width="60%" alt="Logo">
+        <button mat-mini-fab color="primary"   class="mat-elevation-z1 button-sidebar "  (click)="collapsed.set(!collapsed())">
+            <mat-icon>menu</mat-icon>
+        </button>
+        
+    </div>
+</mat-toolbar>
+  <mat-sidenav-container  >
+    <mat-sidenav #snav id="snav"  class="snav" class="mat-elevation-z15 "  opened mode="side" [style.width]="sidenavwidth()">
+        <app-custom-sidenav [collapsed]="collapsed()" />
+      </mat-sidenav>
+      
+        <mat-sidenav-content class="content" [style.margin-left]="sidenavwidth()">
+          <ng-content></ng-content>
+      </mat-sidenav-content>
+  </mat-sidenav-container>

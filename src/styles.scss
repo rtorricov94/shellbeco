@@ -1,0 +1,10 @@
+@use 'bec-theme.scss' as custom-theme;
+@use '@angular/material' as mat;
+
+@include mat.all-component-themes(custom-theme.$app-theme);
+ 
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+button {
+    border-radius: 40px !important;
+ }

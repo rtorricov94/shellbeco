@@ -1,0 +1,14 @@
+<div class="sidenav-header">
+    <img [width]="profilePicSize()" [height]="profilePicSize()" src="/assets/foto.png" />
+    <div class="header-text" [class.hide-header-text]="sidenavCollapsed()">
+        <h2>Usuario</h2>
+        <p>Perfil</p>
+    </div>
+</div>
+<mat-nav-list class="mat-elevation-z3" >
+    <a mat-list-item *ngFor="let item of menuItems()" matTooltip="dashboard" routeLinkActive="selected-menu-item"
+        [activated]="true">
+        <mat-icon matListItemIcon>{{item.icon}}</mat-icon>
+        <span matListItemTitle   *ngIf="!sidenavCollapsed()">{{item.label}}</span>
+    </a>
+</mat-nav-list>
